@@ -1,9 +1,9 @@
 # Responsi 2 - Praktikum Pemrograman Berorientasi Objek
 
-**Dibuat oleh:** [Nama Anda]  
-**NIM:** [NIM Anda]  
-**Shift Baru:** [Shift Anda]    
-**Shift KRS:** [Shift Anda]
+**Dibuat oleh:** Mohammad Ferdian Samputra  
+**NIM:** H1D024023
+**Shift Baru:** I    
+**Shift KRS:** I
 
 ---
 
