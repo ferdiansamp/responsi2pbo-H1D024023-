@@ -5,7 +5,7 @@ public class PesawatTempur extends KendaraanGalaksi {
     // ==========================================================
 
     // TODO:
-    // private int jumlahRudal
+     private int jumlahRudal;
 
 
     // ==========================================================
@@ -18,6 +18,10 @@ public class PesawatTempur extends KendaraanGalaksi {
     //   - kapasitasPenumpang
     //   - jumlahRudal
     // Panggil super(...) untuk parent.
+    public PesawatTempur(String namaKendaraan, int kapasitasPenumpang, int jumlahRudal) {
+        super(namaKendaraan, kapasitasPenumpang);
+        this.jumlahRudal = jumlahRudal;
+    }
 
 
     // ==========================================================
@@ -27,6 +31,14 @@ public class PesawatTempur extends KendaraanGalaksi {
     // @Override aktifkanMesin()
     // Jika energi < 20 → tampilkan "Energi terlalu rendah! Mesin tidak dapat diaktifkan."
     // Jika cukup → tampilkan "Mesin pesawat tempur diaktifkan."
+    @Override
+    void aktifkanMesin() {
+        if(super.getLevelEnergi() < 20) {
+            System.out.println("Energi terlalu rendah! Mesin tidak dapat diaktifkan.");
+        } else {
+            System.out.println("Mesin pesawat tempur diaktifkan.");
+        }
+    }
 
 
     // @Override jelajah(int jarak)
@@ -34,11 +46,25 @@ public class PesawatTempur extends KendaraanGalaksi {
     // Jika energi tidak cukup → tampilkan pesan gagal.
     // Jika cukup → kurangi energi dan tampilkan:
     // "Pesawat tempur menjelajah sejauh [jarak] km."
+    @Override
+    void jelajah(int jarak) {
+        if(jarak * 3 > super.getLevelEnergi()) {
+            System.out.println("Energi tidak mencukupi untuk menjelajah sejauh " + jarak);
+        } else {
+            super.setLevelEnergi(super.getLevelEnergi() - (jarak * 3));
+            System.out.println("Pesawat tempur menjelajah sejauh " + jarak + " km.");
+        }
+    }
 
 
     // @Override isiEnergi(int jumlah)
     // Tambah energi sampai max 100%.
     // Tampilkan pesan peningkatan energi.
+    @Override
+    void isiEnergi(int jumlah) {
+        super.setLevelEnergi(jumlah);
+        System.out.println("Peningkatan energi.");
+    }
 
 
     // ==========================================================
@@ -50,4 +76,12 @@ public class PesawatTempur extends KendaraanGalaksi {
     // - Jika jumlahRudal cukup → kurangi dan tampilkan:
     //   "Menembakkan [jumlah] rudal!"
     // - Jika tidak cukup → tampilkan pesan gagal.
+    void tembakRudal(int jumlah) {
+        if(this.jumlahRudal > jumlah) {
+            this.jumlahRudal -= jumlah;
+            System.out.println("Menembakkan " + jumlah + " rudal!");
+        } else {
+            System.out.println("Gagal");
+        }
+    }
 }

@@ -7,11 +7,12 @@ public interface KaryawanKontrak {
     // DEKLARASI METHOD 1: hitungGaji
     // Menerima satu parameter: int jamKerja
     // Mengembalikan nilai: double (total gaji)
-    
+    double hitungGaji(int jamKerja);
     
     // DEKLARASI METHOD 2: perpanjangKontrak
     // Menerima satu parameter: int durasiBulan
     // Mengembalikan nilai: void
+    void perpanjangKontrak(int durasiBulan);
     
     
     // ==========================================================
@@ -21,5 +22,6 @@ public interface KaryawanKontrak {
     // DEKLARASI DEFAULT METHOD: getStatusCuti
     // Tidak menerima parameter
     // Mengembalikan nilai: String "Tersedia 12 hari"
+    String getStatusCuti();
     
 }

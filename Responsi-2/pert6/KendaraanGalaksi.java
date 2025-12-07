@@ -8,6 +8,9 @@ public abstract class KendaraanGalaksi {
     // - String namaKendaraan
     // - int levelEnergi         (0–100)
     // - int kapasitasPenumpang
+    private String namaKendaraan;
+    private int levelEnergi;
+    private int kapasitasPenumpang;
 
 
     // ==========================================================
@@ -19,6 +22,11 @@ public abstract class KendaraanGalaksi {
     //   - namaKendaraan
     //   - kapasitasPenumpang
     // levelEnergi default = 100.
+    public KendaraanGalaksi(String namaKendaraan, int kapasitasPenumpang) {
+        this.namaKendaraan = namaKendaraan;
+        this.levelEnergi = 100;
+        this.kapasitasPenumpang = kapasitasPenumpang;
+    }
 
 
     // ==========================================================
@@ -26,9 +34,20 @@ public abstract class KendaraanGalaksi {
     // ==========================================================
 
     // TODO: Getter namaKendaraan
+    public String getNamaKendaraan() {
+        return namaKendaraan;
+    }
     // TODO: Getter levelEnergi
+    public int getLevelEnergi() {
+        return levelEnergi;
+    }
+    public void setLevelEnergi(int levelEnergi) {
+        this.levelEnergi = levelEnergi;
+    }
     // TODO: Getter kapasitasPenumpang
-
+    public int getKapasitasPenumpang() {
+        return kapasitasPenumpang;
+    }
 
     // ==========================================================
     // METHOD BIASA
@@ -38,6 +57,9 @@ public abstract class KendaraanGalaksi {
     // Method final tampilStatus()
     // Format:
     // "[namaKendaraan] | Energi: [levelEnergi]% | Kapasitas: [kapasitasPenumpang] awak"
+    void tampilStatus(){
+        System.out.println(namaKendaraan + " | Energi: " + levelEnergi + "% | Kapasitas: " + kapasitasPenumpang + " awak");
+    }
 
 
     // ==========================================================
@@ -45,11 +67,11 @@ public abstract class KendaraanGalaksi {
     // ==========================================================
 
     // TODO:
-    // abstract void aktifkanMesin();
+     abstract void aktifkanMesin();
 
     // TODO:
-    // abstract void jelajah(int jarak);
+     abstract void jelajah(int jarak);
 
     // TODO:
-    // abstract void isiEnergi(int jumlah);
+     abstract void isiEnergi(int jumlah);
 }

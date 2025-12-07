@@ -8,3 +8,8 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+1. Untuk mewarisi sifat-sifat yang dimiliki oleh superclass kepada subclass.
+2. Overloading terjadi di constructor, Overriding terjadi di fungsi / prosedur
+3. Untuk memanggil costructor superclass (Karyawan)
+4. Error pada bagian tampilInfo(). Solusinya gunakan getter dan setter
+5. Untuk mempermudah pembacaan program dan menghindari terjadinya WET (Write Everything Twice)

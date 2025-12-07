@@ -7,11 +7,13 @@ public interface AksesSistem {
     // DEKLARASI METHOD 1: login
     // Menerima satu parameter: String pin
     // Mengembalikan nilai: void
+    void login(String pin);
     
     
     // DEKLARASI METHOD 2: logout
     // Tidak menerima parameter
     // Mengembalikan nilai: void
+    void logout();
     
     
     // ==========================================================
@@ -21,5 +23,6 @@ public interface AksesSistem {
     // DEKLARASI DEFAULT METHOD: getRoleAkses
     // Tidak menerima parameter
     // Mengembalikan nilai: String "Staff Biasa"
+    String getRoleAkses();
     
 }
